@@ -1,5 +1,5 @@
 import React from 'react'
-import { Trade, TradeType } from '@pancakeswap-libs/sdk'
+import { Trade, TradeType } from '@overage69/pancake-sdk-v2'
 import { Card, CardBody, Text } from '@pancakeswap-libs/uikit'
 import useI18n from 'hooks/useI18n'
 import { Field } from '../../state/swap/actions'
@@ -37,9 +37,9 @@ function TradeSummary({ trade, allowedSlippage }: { trade: Trade; allowedSlippag
             <Text fontSize="14px">
               {isExactIn
                 ? `${slippageAdjustedAmounts[Field.OUTPUT]?.toSignificant(4)} ${trade.outputAmount.currency.symbol}` ??
-                  '-'
+                '-'
                 : `${slippageAdjustedAmounts[Field.INPUT]?.toSignificant(4)} ${trade.inputAmount.currency.symbol}` ??
-                  '-'}
+                '-'}
             </Text>
           </RowFixed>
         </RowBetween>

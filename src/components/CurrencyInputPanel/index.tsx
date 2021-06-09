@@ -1,5 +1,5 @@
 import React, { useState, useCallback } from 'react'
-import { Currency, Pair } from '@pancakeswap-libs/sdk'
+import { Currency, Pair } from '@overage69/pancake-sdk-v2'
 import { Button, ChevronDownIcon, Text } from '@pancakeswap-libs/uikit'
 import styled from 'styled-components'
 import { darken } from 'polished'
@@ -164,9 +164,9 @@ export default function CurrencyInputPanel({
                 <Text id="pair">
                   {(currency && currency.symbol && currency.symbol.length > 20
                     ? `${currency.symbol.slice(0, 4)}...${currency.symbol.slice(
-                        currency.symbol.length - 5,
-                        currency.symbol.length
-                      )}`
+                      currency.symbol.length - 5,
+                      currency.symbol.length
+                    )}`
                     : currency?.symbol) || TranslateString(1196, 'Select a currency')}
                 </Text>
               )}
